@@ -1,3 +1,0 @@
-[submodule "solarized"]
-    path = /themes/emacs-color-theme-solarized
-    url = https://github.com/lewang/emacs-color-theme-solarized.git
