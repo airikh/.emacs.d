@@ -75,11 +75,6 @@
 ;; Nyancat mode!
 ;;;;;(nyan-mode 1)
 
-
-;; helm themes
-(require 'helm-config)
-(require 'helm-themes)
-
 ;---------------------------------------------------------------------
 ;; Put auto 'custom' changes in a separate file (this is stuff like
 ;; custom-set-faces and custom-set-variables)
