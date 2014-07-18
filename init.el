@@ -45,7 +45,6 @@
 ;; Helm
 (require 'helm-settings)
 
-
 ;-----------;
 ;;; Modes ;;;
 ;-----------;
@@ -74,6 +73,17 @@
 
 ;; Nyancat mode!
 ;;;;;(nyan-mode 1)
+
+;-------------------------;
+;;; Custom key bindings ;;;
+;-------------------------;
+(global-set-key (kbd "C-c h") 'helm-mini)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-f") 'helm-find-files)
+(global-set-key (kbd "M-b") 'helm-buffers-list)
+(global-set-key (kbd "C-M-b") 'helm-bookmarks)
+
 
 ;---------------------------------------------------------------------
 ;; Put auto 'custom' changes in a separate file (this is stuff like

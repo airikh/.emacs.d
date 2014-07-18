@@ -49,6 +49,11 @@
 (custom-set-frame-size)
 (add-hook 'before-make-frame-hook 'custom-set-frame-size)
 
+; change frame title to display the full path of the current buffer
+(setq frame-title-format
+  '(buffer-file-name "%f"
+   (dired-directory dired-directory "%b")))
+
 ; window modifications
 ;; (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
 ;; (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
