@@ -19,6 +19,7 @@
                auto-complete
                color-theme-solarized
                ein
+               modeline-posn
 ;;               magit
                markdown-mode
                matlab-mode
