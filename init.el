@@ -6,9 +6,6 @@
 ;; define various custom functions
 (require 'custom-functions)
 
-;; configure general settings
-(require 'general-settings)
-
 ;; install dependencies with el-get
 (require 'el-get-settings)
 
@@ -74,16 +71,8 @@
 ;; Nyancat mode!
 ;;;;;(nyan-mode 1)
 
-;-------------------------;
-;;; Custom key bindings ;;;
-;-------------------------;
-(global-set-key (kbd "C-c h") 'helm-mini)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "M-f") 'helm-find-files)
-(global-set-key (kbd "M-b") 'helm-buffers-list)
-(global-set-key (kbd "C-M-b") 'helm-bookmarks)
-
+;; configure general settings
+(require 'general-settings)
 
 ;---------------------------------------------------------------------
 ;; Put auto 'custom' changes in a separate file (this is stuff like
@@ -92,23 +81,9 @@
  (setq custom-file (expand-file-name "settings/custom.el" user-emacs-directory))
  'noerror)
 
-
-(defface long-line-face
-   '((((class color)))
-      (t))
-   "Face for highlighting charcters exceeding the 80 character limit"
-   :group 'warnings)
-
-(font-lock-add-keywords 
-     'python-mode
-     '(("^[^\n]\\{80\\}\\(.*\\)$"
-        1 'long-line-face prepend)))
-
 ;; (defun font-lock-add-keywords (mode)
 ;;      mode
 ;;      '(("^[^\n]\\{80\\}\\(.*\\)$"
 ;;         1 'my-long-line-face prepend)))
-
-
 
 ;(cc-mode-add-keywords 'python-mode)

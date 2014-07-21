@@ -77,15 +77,15 @@
 (global-set-key [f4] 'goto-line)
 
 ; require final newlines in files when they are saved
-;;;;;(setq require-final-newline 1)
+(setq require-final-newline 1)
 ; add a new line when going to the next line
-(setq next-line-add-newlines t)
+;(setq next-line-add-newlines t)
 
 ; show the current line and column numbers in the stats bar as well
 (line-number-mode 1)
 (column-number-mode 1)
 
-; don't blink the cursor
+;; don't blink the cursor
 (blink-cursor-mode 0)
 
 ; make sure transient mark mode is enabled (it should be by default,
@@ -121,6 +121,32 @@
   "Prevent y-or-n-p from activating a dialog"
   (let ((use-dialog-box nil))
     ad-do-it))
+
+
+;; highlight long lines
+(defface long-line-face
+   '((((class color)))
+      (t))
+   "Face for highlighting charcters exceeding the 80 character limit"
+   :group 'warnings)
+
+(font-lock-add-keywords 
+     'python-mode
+     '(("^[^\n]\\{80\\}\\(.*\\)$"
+        1 'long-line-face prepend)))
+
+;-------------------------;
+;;; Custom key bindings ;;;
+;-------------------------;
+(global-set-key (kbd "C-c h") 'helm-mini)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-f") 'helm-find-files)
+(global-set-key (kbd "M-b") 'helm-buffers-list)
+(global-set-key (kbd "C-M-b") 'helm-bookmarks)
+
+; comment block shortcuts
+(global-set-key (kbd "C-M-/") 'comment-or-uncomment-region)
 
 (provide 'general-settings)
 
