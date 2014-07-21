@@ -81,6 +81,8 @@
  (setq custom-file (expand-file-name "settings/custom.el" user-emacs-directory))
  'noerror)
 
+;(custom-set-faces (if (not window-system) '(default ((t (:background "nil"))))))
+
 ;; (defun font-lock-add-keywords (mode)
 ;;      mode
 ;;      '(("^[^\n]\\{80\\}\\(.*\\)$"
