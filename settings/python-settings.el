@@ -30,7 +30,7 @@
 ;; -----------------------------
 
 ; use autocompletion, but don't start to autocomplete after a dot
-(setq ein:complete-on-dot -1)
+(setq ein:complete-on-dot 1)
 (setq ein:use-auto-complete 1)
 
 ; set python console args
