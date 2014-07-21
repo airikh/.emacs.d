@@ -34,7 +34,7 @@
     (setq ns-command-modifier 'meta))
 
 ; number of characters until the fill column 
-(setq-default fill-column 70)
+(setq-default fill-column 80)
 
 ; each line of text gets one line on the screen (i.e., text will run
 ; off the left instead of wrapping around onto a new line)
@@ -44,8 +44,10 @@
 
 ; default window width and height
 (defun custom-set-frame-size ()
-  (add-to-list 'default-frame-alist '(height . 50))
-  (add-to-list 'default-frame-alist '(width . 178)))
+  (add-to-list 'default-frame-alist '(top . 0))
+  (add-to-list 'default-frame-alist '(left . 0))
+  (add-to-list 'default-frame-alist '(height . 61))
+  (add-to-list 'default-frame-alist '(width . 160)))
 (custom-set-frame-size)
 (add-hook 'before-make-frame-hook 'custom-set-frame-size)
 
@@ -135,6 +137,9 @@
      '(("^[^\n]\\{80\\}\\(.*\\)$"
         1 'long-line-face prepend)))
 
+;; replace highlight text when typing
+(delete-selection-mode 1)
+
 ;-------------------------;
 ;;; Custom key bindings ;;;
 ;-------------------------;
@@ -144,6 +149,7 @@
 (global-set-key (kbd "M-f") 'helm-find-files)
 (global-set-key (kbd "M-b") 'helm-buffers-list)
 (global-set-key (kbd "C-M-b") 'helm-bookmarks)
+(global-set-key (kbd "C-M-f") 'helm-occur)
 
 ; comment block shortcuts
 (global-set-key (kbd "C-M-/") 'comment-or-uncomment-region)
