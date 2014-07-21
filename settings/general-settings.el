@@ -149,7 +149,7 @@
 (global-set-key (kbd "M-f") 'helm-find-files)
 (global-set-key (kbd "M-b") 'helm-buffers-list)
 (global-set-key (kbd "C-M-b") 'helm-bookmarks)
-(global-set-key (kbd "C-M-f") 'helm-occur)
+(global-set-key (kbd "C-M-s") 'helm-occur)
 
 ; comment block shortcuts
 (global-set-key (kbd "C-M-/") 'comment-or-uncomment-region)
