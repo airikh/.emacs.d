@@ -160,6 +160,10 @@
                   (setq current-prefix-arg '(4)) ; C-u
                   (call-interactively 'helm-do-grep)))
 
+(global-set-key (kbd "C-M-<right>") 'next-buffer)
+(global-set-key (kbd "C-M-<left>") 'previous-buffer)
+(global-set-key (kbd "C-M-k") 'kill-this-buffer)
+
 (provide 'general-settings)
 
 
