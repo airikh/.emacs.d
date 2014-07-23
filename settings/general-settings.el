@@ -29,10 +29,9 @@
 (require 'mwheel)
 (mouse-wheel-mode 1)
 
-; set command key to be meta instead of option
-(if (system-is-mac)
-    (setq ns-command-modifier 'meta))
-
+; make alt key work in XQuarts
+; In XQuarts prefs, check box for "Option keys send..."
+; and uncheck the other keyboard related boxes.
 (setq x-alt-keysym 'meta)
 
 ; number of characters until the fill column 
@@ -153,8 +152,18 @@
 (global-set-key (kbd "C-M-b") 'helm-bookmarks)
 (global-set-key (kbd "C-M-s") 'helm-occur)
 
-; comment block shortcuts
 (global-set-key (kbd "C-M-/") 'comment-or-uncomment-region)
+
+(global-set-key (kbd "H-v") 'yank)
+(global-set-key (kbd "H-x") 'kill-region)
+(global-set-key (kbd "H-c") 'kill-ring-save)
+(global-set-key (kbd "H-z") 'undo)
+(global-set-key (kbd "H-s") 'save-buffer)
+(global-set-key (kbd "H-o") 'helm-find-files)
+(global-set-key (kbd "H-g")
+                (lambda () (interactive)
+                  (setq current-prefix-arg '(4)) ; C-u
+                  (call-interactively 'helm-do-grep)))
 
 (provide 'general-settings)
 

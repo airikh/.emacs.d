@@ -14,13 +14,16 @@
  '(custom-theme-directory "~/.emacs.d/themes/")
  '(custom-theme-load-path (quote ("~/.emacs.d/el-get/" "~/.emacs.d/themes/emacs-color-theme-solarized/" custom-theme-directory t)))
  '(desktop-save-mode t)
+ '(find-file-run-dired nil)
  '(foreground-color "#708183")
  '(helm-boring-file-regexp-list (quote ("\\.git$" "\\.hg$" "\\.svn$" "\\.CVS$" "\\._darcs$" "\\.la$" "\\.o$" "~$" ".*/\\..*")))
  '(helm-ff-skip-boring-files nil nil nil "change to show hidden files --eric")
  '(helm-ff-tramp-not-fancy nil)
  '(helm-match-plugin-mode t nil (helm-match-plugin))
  '(helm-mode t)
+ '(large-file-warning-threshold 100000000)
  '(mouse-wheel-scroll-amount (quote (1 ((shift) . 1) ((control)))))
+ '(ns-command-modifier (quote hyper))
  '(tramp-default-user-alist (quote (("\\`ssh\\'" nil "ehontz") ("\\`smb\\'" nil nil) ("\\`\\(?:fcp\\|krlogin\\|r\\(?:cp\\|emcp\\|sh\\)\\|telnet\\)\\'" nil "ehontz") ("\\`\\(?:ksu\\|su\\(?:do\\)?\\)\\'" nil "root") ("\\`\\(?:socks\\|tunnel\\)\\'" nil "ehontz") ("\\`synce\\'" nil nil)))))
 
 (custom-set-faces
