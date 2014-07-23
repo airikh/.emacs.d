@@ -33,6 +33,8 @@
 (if (system-is-mac)
     (setq ns-command-modifier 'meta))
 
+(setq x-alt-keysym 'meta)
+
 ; number of characters until the fill column 
 (setq-default fill-column 80)
 
@@ -46,7 +48,7 @@
 (defun custom-set-frame-size ()
   (add-to-list 'default-frame-alist '(top . 0))
   (add-to-list 'default-frame-alist '(left . 0))
-  (add-to-list 'default-frame-alist '(height . 61))
+  (add-to-list 'default-frame-alist '(height . 40))
   (add-to-list 'default-frame-alist '(width . 160)))
 (custom-set-frame-size)
 (add-hook 'before-make-frame-hook 'custom-set-frame-size)
