@@ -31,6 +31,7 @@
 ;;               nyan-mode
                helm
                helm-descbinds
+               pymacs
                ))   
 
 ; first enable shallow clone, so we don't need to clone the entire

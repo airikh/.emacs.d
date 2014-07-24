@@ -100,6 +100,16 @@
        (list '("\\.pyx" . python-mode))
        auto-mode-alist))
 
+;; pymacs and ropemacs
+(require 'pymacs)
+(autoload 'pymacs-apply "pymacs")
+(autoload 'pymacs-call "pymacs")
+(autoload 'pymacs-eval "pymacs" nil t)
+(autoload 'pymacs-exec "pymacs" nil t)
+(autoload 'pymacs-load "pymacs" nil t)
+(autoload 'pymacs-autoload "pymacs")
+(pymacs-load "ropemacs" "rope-")
+
 ; keybindings
 (eval-after-load 'python
   '(define-key python-mode-map (kbd "C-c !") 'python-shell-switch-to-shell))
