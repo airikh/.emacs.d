@@ -42,7 +42,7 @@
 (defun custom-set-frame-size ()
   (add-to-list 'default-frame-alist '(top . 0))
   (add-to-list 'default-frame-alist '(left . 0))
-  (add-to-list 'default-frame-alist '(height . 61))
+  (add-to-list 'default-frame-alist '(height . 40))
   (add-to-list 'default-frame-alist '(width . 160)))
 (custom-set-frame-size)
 (add-hook 'before-make-frame-hook 'custom-set-frame-size)
