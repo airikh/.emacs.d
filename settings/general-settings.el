@@ -149,13 +149,13 @@
 
 (global-set-key (kbd "C-M-/") 'comment-or-uncomment-region)
 
-(global-set-key (kbd "S-v") 'yank)
-(global-set-key (kbd "S-x") 'kill-region)
-(global-set-key (kbd "S-c") 'kill-ring-save)
-(global-set-key (kbd "S-z") 'undo)
-(global-set-key (kbd "S-s") 'save-buffer)
-(global-set-key (kbd "S-o") 'helm-find-files)
-(global-set-key (kbd "S-g")
+(global-set-key (kbd "s-v") 'yank)
+(global-set-key (kbd "s-x") 'kill-region)
+(global-set-key (kbd "s-c") 'kill-ring-save)
+(global-set-key (kbd "s-z") 'undo)
+(global-set-key (kbd "s-s") 'save-buffer)
+(global-set-key (kbd "s-o") 'helm-find-files)
+(global-set-key (kbd "s-g")
                 (lambda () (interactive)
                   (setq current-prefix-arg '(4)) ; C-u
                   (call-interactively 'helm-do-grep)))
