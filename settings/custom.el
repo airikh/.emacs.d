@@ -23,7 +23,6 @@
  '(helm-mode t)
  '(large-file-warning-threshold 100000000)
  '(mouse-wheel-scroll-amount (quote (1 ((shift) . 1) ((control)))))
- '(ns-command-modifier (quote hyper))
  '(tramp-default-user-alist (quote (("\\`ssh\\'" nil "ehontz") ("\\`smb\\'" nil nil) ("\\`\\(?:fcp\\|krlogin\\|r\\(?:cp\\|emcp\\|sh\\)\\|telnet\\)\\'" nil "ehontz") ("\\`\\(?:ksu\\|su\\(?:do\\)?\\)\\'" nil "root") ("\\`\\(?:socks\\|tunnel\\)\\'" nil "ehontz") ("\\`synce\\'" nil nil)))))
 
 (custom-set-faces
