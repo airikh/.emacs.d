@@ -136,6 +136,9 @@
 ;; replace highlight text when typing
 (delete-selection-mode 1)
 
+;; turn off warning bell
+(setq ring-bell-function 'ignore)
+
 ;-------------------------;
 ;;; Custom key bindings ;;;
 ;-------------------------;
