@@ -158,6 +158,8 @@
 (global-set-key (kbd "s-z") 'undo)
 (global-set-key (kbd "s-s") 'save-buffer)
 (global-set-key (kbd "s-o") 'helm-find-files)
+(global-set-key (kbd "s-<right>") 'move-end-of-line)
+(global-set-key (kbd "s-<left>") 'move-beginning-of-line)
 (global-set-key (kbd "s-g")
                 (lambda () (interactive)
                   (setq current-prefix-arg '(4)) ; C-u
