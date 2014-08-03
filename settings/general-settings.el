@@ -150,8 +150,7 @@
 (global-set-key (kbd "C-M-b") 'helm-bookmarks)
 (global-set-key (kbd "C-M-s") 'helm-occur)
 
-(global-set-key (kbd "C-M-/") 'comment-or-uncomment-region)
-
+(global-set-key (kbd "s-/") 'comment-or-uncomment-region)
 (global-set-key (kbd "s-v") 'yank)
 (global-set-key (kbd "s-x") 'kill-region)
 (global-set-key (kbd "s-c") 'kill-ring-save)
