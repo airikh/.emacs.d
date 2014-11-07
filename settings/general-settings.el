@@ -49,8 +49,8 @@
   (add-to-list 'default-frame-alist '(left . 0))
   (add-to-list 'default-frame-alist '(height . 40))
   (add-to-list 'default-frame-alist '(width . 160)))
-(custom-set-frame-size)
-(add-hook 'before-make-frame-hook 'custom-set-frame-size)
+;(custom-set-frame-size)
+;(add-hook 'before-make-frame-hook 'custom-set-frame-size)
 
 ; change frame title to display the full path of the current buffer
 (setq frame-title-format
@@ -141,6 +141,9 @@
 ;; replace highlight text when typing
 (delete-selection-mode 1)
 
+;; turn off warning bell
+(setq ring-bell-function 'ignore)
+
 ;-------------------------;
 ;;; Custom key bindings ;;;
 ;-------------------------;
@@ -152,15 +155,16 @@
 (global-set-key (kbd "C-M-b") 'helm-bookmarks)
 (global-set-key (kbd "C-M-s") 'helm-occur)
 
-(global-set-key (kbd "C-M-/") 'comment-or-uncomment-region)
-
-(global-set-key (kbd "H-v") 'yank)
-(global-set-key (kbd "H-x") 'kill-region)
-(global-set-key (kbd "H-c") 'kill-ring-save)
-(global-set-key (kbd "H-z") 'undo)
-(global-set-key (kbd "H-s") 'save-buffer)
-(global-set-key (kbd "H-o") 'helm-find-files)
-(global-set-key (kbd "H-g")
+(global-set-key (kbd "s-/") 'comment-or-uncomment-region)
+(global-set-key (kbd "s-v") 'yank)
+(global-set-key (kbd "s-x") 'kill-region)
+(global-set-key (kbd "s-c") 'kill-ring-save)
+(global-set-key (kbd "s-z") 'undo)
+(global-set-key (kbd "s-s") 'save-buffer)
+(global-set-key (kbd "s-o") 'helm-find-files)
+(global-set-key (kbd "s-<right>") 'move-end-of-line)
+(global-set-key (kbd "s-<left>") 'move-beginning-of-line)
+(global-set-key (kbd "s-g")
                 (lambda () (interactive)
                   (setq current-prefix-arg '(4)) ; C-u
                   (call-interactively 'helm-do-grep)))
