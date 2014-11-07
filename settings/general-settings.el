@@ -44,8 +44,8 @@
   (add-to-list 'default-frame-alist '(left . 0))
   (add-to-list 'default-frame-alist '(height . 40))
   (add-to-list 'default-frame-alist '(width . 160)))
-(custom-set-frame-size)
-(add-hook 'before-make-frame-hook 'custom-set-frame-size)
+;(custom-set-frame-size)
+;(add-hook 'before-make-frame-hook 'custom-set-frame-size)
 
 ; change frame title to display the full path of the current buffer
 (setq frame-title-format

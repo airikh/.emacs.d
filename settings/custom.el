@@ -13,7 +13,7 @@
  '(custom-safe-themes (quote ("1eee02cdb5ec320550d2e752c7de57909a646c04e5a116feb479a8950efd435f" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default)))
  '(custom-theme-directory "~/.emacs.d/themes/")
  '(custom-theme-load-path (quote ("~/.emacs.d/el-get/" "~/.emacs.d/themes/emacs-color-theme-solarized/" custom-theme-directory t)))
- '(desktop-save-mode t)
+ '(desktop-save-mode nil)
  '(find-file-run-dired nil)
  '(foreground-color "#708183")
  '(helm-bookmark-show-location t)
